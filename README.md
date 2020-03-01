@@ -1,5 +1,5 @@
 # Pyxel入門
-　Pyxel(ピクセル)はPythonで作るレトロゲーム環境です.
+Pyxel(ピクセル)はPythonで作るレトロゲーム環境です.
 
 レトロゲームの定義について世代によって変わると思いますが.
 ここではファミコン程度のスペックと考えてください.
@@ -10,12 +10,19 @@ Pyxelは意図的に使用できるリソースに制限をかけています.
 
 公式の資料もありますのでより詳しい内容については
 
-こちら[😆リンク](https://github.com/kitao/pyxel/blob/5dec75ded65376930d23523e1fd85a2e91b0bfb8/README.ja.md)
+[こちら](https://github.com/kitao/pyxel/blob/5dec75ded65376930d23523e1fd85a2e91b0bfb8/README.ja.md)
 
 ## インストール
 
 もし自分のPCでやるなら[Pycharm](https://www.jetbrains.com/ja-jp/pycharm/)がおすすめです!
-pythonのバージョンは3.7以上が必要です,
+
+pythonのバージョンは3.7以上が必要です
+
+pyxelのインストールはUbuntuであれば,
+```
+sudo apt install python3 python3-pip libsdl2-dev libsdl2-image-dev
+sudo -H pip3 install -U pyxel
+```
 
 ## インポート
 
@@ -25,7 +32,6 @@ pyxelを`import`する必要があります.
 ```python
 import pyxel
 ```
-## 実行
 
 ## 01-画面の立ち上げ
 `pyxel`をimportしたら描画する画面を表示します.
@@ -34,13 +40,13 @@ import pyxel
 `pyxel.run`関数でアプリとして開始します.
 `pyxel.run`では更新関数と描画関数を渡す必要があります.
 
-更新は定期的に呼ばれる関数です.一般的にはゲームであれば60fps(1秒間に60回60フレーム)
+更新関数は定期的に呼ばれる関数です.一般的にはゲームであれば60fps(1秒間に60回60フレーム)
 or 30fpsで更新します.(fpsは自分で変更できます)
 
-描画は画面に描画する処理についての関数です.この関数で何を描くかを設定します.
+描画関数は画面に描画する処理についての関数です.この関数で何を描くかを設定します.
 
 ![open_window.png](asset/open_window.png)
-
+[01_open_window.py](01_open_window.py)
 ```python
 import pyxel
 
