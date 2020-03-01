@@ -83,6 +83,7 @@ pyxel.run(update,draw)
 [02_draw_background.py](02_draw_background.py)
 
 ![02-background.png](img/02-background.png)
+
 色が変わりました.ところで`pyxel.cls(8)`のclsは**Cl**ear **S**creenの
 ことですが,`8`とはなんでしょうか? これはデフォルトのカラーパレットの色を指定しています.
 
@@ -92,13 +93,13 @@ pyxel.run(update,draw)
 
 他の色を使いたい場合は[こちらを参考にしてください](#10-初期設定を変更する)
 
-## 02-テキストを描画する
+## 03-テキストを描画する
 テキストの描画は`pyxel.text(x,y,str,col)`でできます.
-引数は x座標,y座標,テキスト,カラーパレットの値です.
+引数は x座標,y座標,テキスト,カラーパレットのインデックスです.
 
 画面の左上に`(^ ^)`と表示してみます.
 
-```
+```python
 import pyxel
 def update():
     pass
@@ -125,11 +126,9 @@ pyxel.run(update, draw)
 ## 04-動きをつける
 背景色を変更し,テキストを描画することができました.
 
-次にこのテキストを動かしてみます.ここでようやくupdate関数を使用します.
+次はこのテキストを動かしてみます.ここでようやくupdate関数を使用します.
 テキストを動かすにはx,y座標を変更することで実現可能です.
-今まではx,y座標に定数を指定していましたが,変更するためには変数として宣言する必要があります.
-
-このため,x,yを変数として宣言します.
+今まではx,y座標に定数を指定していましたが,変数として宣言します.
 
 ```python
 import pyxel
@@ -145,9 +144,12 @@ pyxel.init(160, 120)
 pyxel.run(update, draw)
 
 ```
+
 [04-1_move_text.py](04-1_move_text.py)
+
 ![move_text_1.gif](img/move_text_1.gif)
-ここでは変数をグローバルに宣言しているため,値を変更する際に少し特殊な書き方になっています.
+
+ここでは変数をグローバルに宣言しているため,値を変更するため`global`演算子を使用しています.
 
 この動きは画面外に出ると戻ってきません.なので`update`関数を変更して,画面外に出たら
 戻るようにしましょう.
@@ -174,11 +176,11 @@ pyxel.run(update, draw)
 
 これで常に画面上にテキストが動き回ります.
 
-画面の幅と高さを変数で宣言して`pyxel.init`に設定しましたこれでwidth,heightを変更する
+画面の幅と高さを変数で宣言して`pyxel.init`に設定しました.これで`width`,`height`を変更する
 と画面のサイズを変更することができます.
 
-`update`関数内の`%`は剰余演算です.つまり`x`を`width`で割った時の余を返します.
-値は常にwidth以下です.
+`update`関数内の`%`は剰余演算です.`x`を`width`で割った時のあまりを返します.
+値は常に`width`以下です.
 
 
 ## 05-画像を表示する
@@ -511,5 +513,7 @@ def collision_detection(src, target):
 ## 使用アイコン
 
 Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
 Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
 Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
