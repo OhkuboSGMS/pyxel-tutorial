@@ -368,7 +368,7 @@ pyxel.run(update,draw)
 `pyxel.sound(0)`で設定するサウンドのバッファを指定し,音符を指定しました.
 
 これの実際の音声がこちらです.
-[カエルの歌](https://drive.google.com/open?id=19pPA66mNOag2krzCGdwUlgrz4lI9xDZThttps://drive.google.com/open?id=19pPA66mNOag2krzCGdwUlgrz4lI9xDZT)
+[カエルの歌](https://drive.google.com/open?id=19pPA66mNOag2krzCGdwUlgrz4lI9xDZT)
 
 
 1音ごとの長さが長いので変更します`pyxel.set(note, tone, volume, effect,
@@ -392,7 +392,7 @@ pyxel.sound(0).set(
 `pyxel.set(note, tone, volume, effect,speed)`の`effect`を設定します.
 エフェクトは一音ごとに設定する必要があります.
 
-(N:None ,S:Slide V:Vibrato, F:FadeOut)で表現します.
+(N:None ,S:Slide V:Vibrato, F:FadeOut)の`N S V F`の文字列で表現されます.
 
 ```python
 pyxel.sound(0).set(
@@ -409,9 +409,14 @@ pyxel.sound(0).set(
 
 これでカエルの歌っぽく演奏できました.
 [07-sound.py](07-sound.py)が最終形のコードです.
-他にはtoneを変えて演奏してみます.(T:Triangle , S:Square ,P:Pulse , N:Noise)
-で表現されます.
+
+さらにtoneを変えて演奏してみます.toneは(T:Triangle , S:Square ,P:Pulse , N:Noise)
+の`T S P N`の文字列で表現されます.
 toneは信号の波形を設定します.
+[カエルの歌-noise](https://drive.google.com/open?id=19WfoHcU-bR7UkTQf46JgjmtTNjV4_xsK)
+[カエルの歌-pulse](https://drive.google.com/open?id=19c3_Uxo8Gfi6ofCNeqfvWdkW7vuuhlBg)
+[カエルの歌-triangle](https://drive.google.com/open?id=19c7KvpmsJvyA6OMksF3Jf-BR4xwVTEXX)
+
 
 
 ## 08-オブジェクト指向で書く
