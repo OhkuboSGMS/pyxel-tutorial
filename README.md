@@ -410,11 +410,15 @@ pyxel.sound(0).set(
 これでカエルの歌っぽく演奏できました.
 [07-sound.py](07-sound.py)が最終形のコードです.
 
-さらにtoneを変えて演奏してみます.toneは(T:Triangle , S:Square ,P:Pulse , N:Noise)
-の`T S P N`の文字列で表現されます.
+さらにtoneを変えて演奏してみます.
+
+toneは(T:Triangle , S:Square ,P:Pulse , N:Noise)の`T S P N`の文字列で表現されます.
 toneは信号の波形を設定します.
+
 [カエルの歌-noise](https://drive.google.com/open?id=19WfoHcU-bR7UkTQf46JgjmtTNjV4_xsK)
+
 [カエルの歌-pulse](https://drive.google.com/open?id=19c3_Uxo8Gfi6ofCNeqfvWdkW7vuuhlBg)
+
 [カエルの歌-triangle](https://drive.google.com/open?id=19c7KvpmsJvyA6OMksF3Jf-BR4xwVTEXX)
 
 
@@ -422,10 +426,9 @@ toneは信号の波形を設定します.
 ## 08-オブジェクト指向で書く
 
 これまでは,`update`,`draw`関数を定義し動作を記述していましたが,
-ゲームを作成する際にはプレイヤや敵,アイテムといった複数の
-要素が存在します.これをオブジェクトごとに`update,draw`関数を
-定義したclassで実装することでそれぞれのオブジェクトをタイプごとに
-抽象化します.
+ゲームを作成する際にはプレイヤや敵,アイテムといった複数の要素が存在します.
+
+これをオブジェクトごとに`update,draw`関数を定義したclassで実装することでそれぞれのオブジェクトをタイプごとに抽象化します.
 
 3つのオブジェクトを定義します.
 
@@ -488,8 +491,8 @@ def collision_detection(src, target):
 
 オブジェクト指向で記述することで各オブジェクトごとに動作を記述しやすくなったり,
 `update`,`draw`関数をどのオブジェクトにも定義することで各オブジェクト間の動作を
-抽象化できるなどの利点があります.一方でオブジェクト間の参照が面倒になるなどの
-欠点もありますこのため,作成する前に設計をよく考えておくことも重要となります.
+抽象化できるなどの利点があります.一方でオブジェクト間の参照が面倒になるなどの欠点もあります.
+このため,作成する前に設計をよく考えておくことも重要となります.
 
 ## 10-初期設定を変更する
 
@@ -507,16 +510,17 @@ def collision_detection(src, target):
 
 デフォルトの16色は
 
-`Palltte ['0x0', '0x1d2b53', '0x7e2553', '0x8751', '0xab5236', '0x5f574f', '0xc2c3c7', '0xfff1e8', '0xff004d', '0xffa300', '0xffec27', '0xe436', '0x29adff', '0x83769c', '0xff77a8', '0xffccaa']`
-![05_color_palette.png](img/05_color_palette.png)
-ですがこれを変更できます.
-パレットの色フォーマットはintのListでサイズが16です.
-各色はRGBで0~7が青,8~15が緑,16~23が赤で表現されています.
+`Palltte ['0x0', '0x1d2b53', '0x7e2553', '0x8751', '0xab5236', '0x5f574f', '0xc2c3c7', '0xfff1e8', '0xff004d', '0xffa300', '0xffec27', '0xe436', '0x29adff', '0x83769c', '0xff77a8', '0xffccaa']`ですがこれを変更できます.
 
-そのため16進数表現では原色の赤は`0xff0000`になります.
+![05_color_palette.png](img/05_color_palette.png)
+パレットの色フォーマットはintのListでサイズが16です.
+各色はRGBで0~7が青, 8~15が緑, 16~23が赤で表現されています.
+
+16進数表現では原色の赤は`0xff0000`になります.
 
 
 `border_width`,`border_color`はゲームの周りの枠線のサイズと色を変更します.
+
 `quit`はゲーム終了のショートカットを変更できます.
 
 [10-init.py](10-init.py)に最終のソースを示します.
