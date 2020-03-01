@@ -19,7 +19,7 @@ Pyxelは意図的に使用できるリソースに制限をかけています.
 pythonのバージョンは3.7以上が必要です
 
 pyxelのインストールはUbuntuであれば,
-```
+```shell script
 sudo apt install python3 python3-pip libsdl2-dev libsdl2-image-dev
 sudo -H pip3 install -U pyxel
 ```
@@ -82,6 +82,7 @@ pyxel.run(update,draw)
 ```
 [02_draw_background.py](02_draw_background.py)
 
+![02-background.png](img/02-background.png)
 色が変わりました.ところで`pyxel.cls(8)`のclsは**Cl**ear **S**creenの
 ことですが,`8`とはなんでしょうか? これはデフォルトのカラーパレットの色を指定しています.
 
@@ -89,8 +90,7 @@ pyxel.run(update,draw)
 
 `8`はつまりカラーパレットの`8`(255,0,77)のことを指しています.
 
-他の色を使いたいですか? TODO ///
-
+他の色を使いたい場合は[こちらを参考にしてください](#10-初期設定を変更する)
 
 ## 02-テキストを描画する
 テキストの描画は`pyxel.text(x,y,str,col)`でできます.
