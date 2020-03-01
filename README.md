@@ -513,8 +513,9 @@ def collision_detection(src, target):
 `Palltte ['0x0', '0x1d2b53', '0x7e2553', '0x8751', '0xab5236', '0x5f574f', '0xc2c3c7', '0xfff1e8', '0xff004d', '0xffa300', '0xffec27', '0xe436', '0x29adff', '0x83769c', '0xff77a8', '0xffccaa']`ですがこれを変更できます.
 
 ![05_color_palette.png](img/05_color_palette.png)
+
 パレットの色フォーマットはintのListでサイズが16です.
-各色はRGBで0~7が青, 8~15が緑, 16~23が赤で表現されています.
+各色はRGBで`0~7`が青, `8~15`が緑, 1`6~23`が赤で表現されています.
 
 16進数表現では原色の赤は`0xff0000`になります.
 
